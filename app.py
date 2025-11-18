@@ -116,9 +116,6 @@ if search_term:
             "Nota de parciales (60% promedio de parciales)", "Nota final", "Condición"
         ]].copy()
 
-        # # Formato de porcentaje
-        # result_to_show['% Actividades realizadas'] = \
-        #     result_to_show['% Actividades realizadas'].apply(lambda x: f'{x:.1%}')
         nombres_cortos = {
                     "Dirección de correo": "Email",
                     "Nota de concepto (40% promedio de actividades)": "Nota Concepto (40%)",
@@ -143,6 +140,11 @@ if search_term:
             st.info(
                 f"¡Hola, {nombre}! Te esperamos en la instancia de examen final 💪. "
                 "Hacenos todas las consultas que necesites 🤗"
+            )
+        elif condicion == "Desaprobado":
+            st.error(
+                f"¡Hola, {nombre}! Lamentablemente no alcanzaste los objetivos mínimos para regularizar. "
+                "¡No te desanimes! Te esperamos el próximo cuatrimestre para volver a intentarlo con todo 💪."
             )
 
     else:
