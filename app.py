@@ -112,7 +112,7 @@ if search_term:
         # Seleccionamos las columnas necesarias
         result_to_show = search_results[[
             "Nombre", "Número de ID", "Dirección de correo",
-            "¿Alcanzó el mínimo de 8 actividades para regularizar?", "Nota de concepto (40% promedio de actividades)", 
+            "Cantidad de actividades aprobadas", "Nota de concepto (40% promedio de actividades)", 
             "Nota de parciales (60% promedio de parciales)", "Nota final", "Condición"
         ]].copy()
 
@@ -121,7 +121,6 @@ if search_term:
         #     result_to_show['% Actividades realizadas'].apply(lambda x: f'{x:.1%}')
         nombres_cortos = {
                     "Dirección de correo": "Email",
-                    "¿Alcanzó el mínimo de 8 actividades para regularizar?": "Regulariza (8 act.)",
                     "Nota de concepto (40% promedio de actividades)": "Nota Concepto (40%)",
                     "Nota de parciales (60% promedio de parciales)": "Nota Parciales (60%)"
                 }
